@@ -31,9 +31,9 @@ end3 = time.perf_counter()
 
 
 x = Pi()
-print(x)
-print(val)
-print(PI)
+print("{:.10f}".format(x))
+print("{:.10f}".format(val))
+print("{:.10f}".format(PI))
 
 
 

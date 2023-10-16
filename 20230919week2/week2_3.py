@@ -1,4 +1,5 @@
-#3 渡河问题
+ #3 渡河问题
+ #from issues
 
 def is_valid_state(state):
     # 检查是否有不安全的状态，即狼吃羊或羊吃菜
@@ -12,10 +13,10 @@ def dfs(state, path, visited):
         # 找到了解决方案
         print("找到解决方案：", path)
         return
-
+    # 寻找能加入集合的渡河步骤
     for move in moves:
-    #寻找能加入集合的渡河步骤
-        new_state = tuple(state[i] + move[i] for i in range(4))#tuple为元组 是有序且不可更改的集合
+        # tuple为元组 是有序且不可更改的集合
+        new_state = tuple(state[i] + move[i] for i in range(4))
         if all(0 <= new_state[i] <= 1 for i in range(-1, 3)) and is_valid_state(new_state) and new_state not in visited:
             visited.add(new_state)
             dfs(new_state, path + [new_state], visited)

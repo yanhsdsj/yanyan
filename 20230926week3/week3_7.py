@@ -5,10 +5,6 @@ def fun(a, b):
         a = b
         b = x
         x = a % b
-        print(a,"a")
-        print(b,"b")
-        print(x,"x")
-        print("\n")
     return b
 a = int(input())
 b = int(input())

@@ -56,8 +56,8 @@ def merge(left, right):
 
     return merged
 
-for count in range(1, 11):
-    n = random.randint(10 * count, 10 * (count + 1))
+for count in range(1, 8):
+    n = random.randint(10 ** count, 10 ** (count + 1))
     print(n)
 
     arr1 = []
@@ -66,7 +66,7 @@ for count in range(1, 11):
     for i in range(0, n):
         arr1.append(random.randint(0,1000000))
         arr2.append(arr1[i])
-    print(arr1)
+    #print(arr1)
 
 
     start1 = time.perf_counter()
